@@ -1,0 +1,87 @@
+BINARY SEARCH ALGORITHM
+========================
+
+OBJECTIVE: Find a target element in a sorted array using divide-and-conquer approach
+
+INPUT: 
+- Sorted array A[1..n]
+- Target value x to search
+
+OUTPUT: 
+- Index of x if found
+- -1 if x is not present
+
+PSEUDOCODE:
+-----------
+
+FUNCTION BinarySearch(A, left, right, x)
+BEGIN
+    IF right >= left THEN
+        mid = left + (right - left) / 2
+        
+        // If element is present at middle
+        IF A[mid] == x THEN
+            RETURN mid
+        END IF
+        
+        // If element is smaller than mid, search left half
+        IF A[mid] > x THEN
+            RETURN BinarySearch(A, left, mid-1, x)
+        END IF
+        
+        // Element is larger than mid, search right half
+        RETURN BinarySearch(A, mid+1, right, x)
+    END IF
+    
+    // Element not present
+    RETURN -1
+END FUNCTION
+
+ITERATIVE VERSION:
+------------------
+
+FUNCTION BinarySearchIterative(A, n, x)
+BEGIN
+    left = 0
+    right = n - 1
+    
+    WHILE left <= right DO
+        mid = left + (right - left) / 2
+        
+        IF A[mid] == x THEN
+            RETURN mid
+        END IF
+        
+        IF A[mid] > x THEN
+            right = mid - 1
+        ELSE
+            left = mid + 1
+        END IF
+    END WHILE
+    
+    RETURN -1
+END FUNCTION
+
+COMPLEXITY ANALYSIS:
+-------------------
+Time Complexity: O(log n)
+Space Complexity: 
+- Recursive: O(log n) - due to call stack
+- Iterative: O(1) - constant space
+
+EXAMPLE EXECUTION:
+Array: [2, 5, 8, 12, 16, 23, 38, 45, 56, 67, 78]
+Target: 23
+
+Step 1: left=0, right=10, mid=5, A[5]=23 ✓
+Found at index 5!
+
+PRECONDITIONS:
+- Array must be sorted
+- Array elements should be comparable
+
+APPLICATIONS:
+- Database indexing
+- Finding insertion point
+- Peak finding problems
+- Square root calculation

@@ -1,0 +1,53 @@
+BUBBLE SORT ALGORITHM
+======================
+
+PROBLEM STATEMENT:
+Sort an array of integers in ascending order using the bubble sort algorithm.
+
+ALGORITHM DESCRIPTION:
+Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.
+
+PSEUDOCODE:
+-----------
+ALGORITHM BubbleSort
+INPUT: Array A[1..n] of integers
+OUTPUT: Array A sorted in ascending order
+
+BEGIN
+    FOR i = 1 TO n-1 DO
+        FOR j = 1 TO n-i DO
+            IF A[j] > A[j+1] THEN
+                SWAP A[j] AND A[j+1]
+            END IF
+        END FOR
+    END FOR
+END
+
+TIME COMPLEXITY:
+- Best Case: O(n) - when array is already sorted
+- Average Case: O(n²)
+- Worst Case: O(n²) - when array is reverse sorted
+
+SPACE COMPLEXITY: O(1) - only uses constant extra space
+
+EXAMPLE TRACE:
+Initial Array: [64, 34, 25, 12, 22, 11, 90]
+
+Pass 1: [34, 25, 12, 22, 11, 64, 90]
+Pass 2: [25, 12, 22, 11, 34, 64, 90]
+Pass 3: [12, 22, 11, 25, 34, 64, 90]
+Pass 4: [12, 11, 22, 25, 34, 64, 90]
+Pass 5: [11, 12, 22, 25, 34, 64, 90]
+
+Final Sorted Array: [11, 12, 22, 25, 34, 64, 90]
+
+ADVANTAGES:
+- Simple implementation
+- No additional memory space needed
+- Stable sorting algorithm
+- Can detect if list is already sorted
+
+DISADVANTAGES:
+- Inefficient for large datasets
+- More swaps compared to other algorithms
+- Poor average and worst-case time complexity

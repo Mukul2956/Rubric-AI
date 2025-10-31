@@ -1,0 +1,77 @@
+ATM WITHDRAWAL PROCESS FLOWCHART
+=================================
+
+PROCESS: Customer withdraws money from ATM machine
+
+FLOWCHART DESCRIPTION:
+---------------------
+
+START
+  ↓
+[Insert Card]
+  ↓
+<Is Card Valid?> ——NO——→ [Display "Invalid Card"] ——→ [Return Card] ——→ END
+  ↓ YES
+[Enter PIN]
+  ↓
+<Is PIN Correct?> ——NO——→ [Increment Attempt Counter]
+  ↓ YES                    ↓
+[Display Main Menu]        <Attempts < 3?> ——YES——→ [Display "Try Again"] ——→ [Enter PIN]
+  ↓                        ↓ NO
+[Select Withdrawal]        [Display "Card Blocked"] ——→ [Retain Card] ——→ END
+  ↓
+[Enter Amount]
+  ↓
+<Amount ≤ Account Balance?> ——NO——→ [Display "Insufficient Funds"] ——→ [Display Main Menu]
+  ↓ YES
+<Amount ≤ ATM Cash Available?> ——NO——→ [Display "ATM Out of Cash"] ——→ [Display Main Menu]
+  ↓ YES
+<Amount ≤ Daily Limit?> ——NO——→ [Display "Exceeds Daily Limit"] ——→ [Display Main Menu]
+  ↓ YES
+[Process Transaction]
+  ↓
+[Update Account Balance]
+  ↓
+[Dispense Cash]
+  ↓
+[Update ATM Cash Count]
+  ↓
+[Print Receipt?] ——YES——→ [Print Receipt]
+  ↓ NO               ↓
+[Display "Thank You"] ←——————————————
+  ↓
+[Return Card]
+  ↓
+END
+
+SYMBOLS LEGEND:
+--------------
+□ = Process/Action
+◊ = Decision/Condition  
+○ = Start/End Terminal
+⬭ = Input/Output
+
+VALIDATION RULES:
+----------------
+1. Card must be valid and not expired
+2. PIN must be correct (max 3 attempts)
+3. Withdrawal amount must be positive
+4. Amount cannot exceed account balance
+5. Amount cannot exceed ATM available cash
+6. Amount cannot exceed daily withdrawal limit
+7. Amount should be in multiples of denomination
+
+ERROR HANDLING:
+--------------
+- Invalid card → Return card immediately
+- Wrong PIN (3 attempts) → Block and retain card
+- Insufficient funds → Show error, return to menu
+- ATM out of cash → Show error, suggest other ATM
+- Network error → Show error, cancel transaction
+
+SECURITY FEATURES:
+-----------------
+- PIN encryption during transmission
+- Transaction timeout (30 seconds)
+- Card retention for suspicious activity
+- Transaction logging for audit trail
