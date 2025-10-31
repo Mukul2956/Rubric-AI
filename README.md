@@ -1,7 +1,7 @@
 
 <div align="center">
 
-<img src="frontend/public/favicon.svg" alt="RubiAI Logo" width="120" height="120">
+<img src="frontend/public/favicon.svg" alt="RubiAI Logo" width="100" height="100">
 
 # RubiAI - Intelligent Rubrics-Based Evaluator
 
