@@ -118,7 +118,7 @@ npm run dev
 
 <div align="center">
 
-### 🎉 **That's it! Open http://localhost:5173 and start evaluating!**
+### 🎉 **That's it! Open http://localhost:3000 and start evaluating!**
 
 </div>
 
