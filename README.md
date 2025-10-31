@@ -1,161 +1,119 @@
 
 # RubiAI - Intelligent Rubrics-Based Evaluator
 
-## Overview
+An intelligent evaluation system for flowcharts, algorithms, and pseudocode using AI-powered rubrics assessment.
 
-RubiAI is an intelligent evaluation system capable of assessing flowcharts, algorithms, and pseudocode against predefined rubrics. The system provides automated, consistent, and immediate feedback without requiring user profiles or persistent data storage.
+## 🚀 Features
 
-## Features
+- **AI-Powered Evaluation**: Uses Claude 3 Haiku via OpenRouter API for intelligent assessment
+- **Custom Rubrics**: Create, edit, and manage evaluation rubrics with browser storage
+- **Multi-Format Support**: Supports PDF, DOCX, PPTX, TXT, PNG, and JPG file uploads
+- **Session Management**: Stateless design with session-based data persistence
+- **Modern UI**: Built with React 18, TypeScript, Vite, and TailwindCSS
+- **Responsive Design**: Professional interface with custom branding and favicon
 
-### Core Capabilities
-- **Multi-Format Support**: Parses and evaluates .docx, .pptx, .pdf, .png, and .jpg files
-- **AI-Powered Analysis**: Intelligent evaluation engine for computational thinking assessments
-- **Rubric-Based Scoring**: Predefined rubrics ensure consistent evaluation criteria
-- **Instant Feedback**: Real-time evaluation with detailed improvement suggestions
-- **Language Agnostic**: Supports pseudocode in various styles and conventions
-- **Stateless Operation**: No user profiles or data storage required
+## 🛠️ Tech Stack
 
-### Evaluation Types
-1. **Flowcharts**: Visual algorithm representation evaluation
-2. **Algorithms**: Code logic and efficiency assessment  
-3. **Pseudocode**: Language-independent algorithm evaluation
+- **Frontend**: React 18 + TypeScript + Vite
+- **Styling**: TailwindCSS + Radix UI Components
+- **AI Integration**: OpenRouter API (Claude 3 Haiku)
+- **Storage**: Browser localStorage + sessionStorage
+- **File Processing**: Multi-format document parsing
 
-### Technical Features
-- **Robust Parser**: Handles multiple file formats seamlessly
-- **Evaluation Engine**: AI-driven assessment against rubric criteria
-- **LMS Integration**: Ready for learning management system integration
-- **Responsive UI**: Modern, user-friendly interface built with React
+## 📦 Installation
 
-## Architecture
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/RubiAI.git
+   cd RubiAI/frontend
+   ```
 
-### Frontend Structure
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   ```bash
+   # Copy the example environment file
+   cp .env.example .env
+   
+   # Edit the .env file and add your OpenRouter API key
+   VITE_OPENROUTER_API_KEY=your_openrouter_api_key_here
+   ```
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open your browser** and navigate to `http://localhost:5173`
+
+## 🔑 Getting an OpenRouter API Key
+
+1. Visit [OpenRouter](https://openrouter.ai/)
+2. Sign up for an account
+3. Navigate to the API Keys section
+4. Create a new API key
+5. Copy the key and add it to your `.env` file
+
+## 🎯 Usage
+
+1. **Upload Files**: Drag and drop or select files (PDF, DOCX, PPTX, TXT, images)
+2. **Create Rubrics**: Define evaluation criteria in the Rubrics section
+3. **Start Evaluation**: Upload content and receive AI-powered feedback
+4. **View Results**: Review detailed evaluations and scores
+5. **Manage Data**: All data is stored locally in your browser
+
+## 📁 Project Structure
+
 ```
-frontend/
-├── src/
-│   ├── components/
-│   │   ├── Dashboard.tsx          # System overview and capabilities
-│   │   ├── UploadPage.tsx         # File upload and evaluation interface
-│   │   ├── EvaluationPage.tsx     # Sample results and feedback display
-│   │   ├── RubricsPage.tsx        # Rubric management and configuration
-│   │   └── ui/                    # Reusable UI components
-│   ├── App.tsx                    # Main application component
-│   └── main.tsx                   # Application entry point
-├── package.json
-└── vite.config.ts
-```
-
-## Getting Started
-
-### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn package manager
-
-### Installation
-
-1. Navigate to the frontend directory:
-```bash
-cd frontend
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Start the development server:
-```bash
-npm run dev
-```
-
-4. Open your browser and navigate to `http://localhost:5173`
-
-## Usage
-
-### Basic Evaluation Process
-
-1. **Upload File**: Select your flowchart, algorithm, or pseudocode file
-   - Supported formats: PDF, DOCX, PPTX, PNG, JPG
-   - Drag and drop or browse to select
-
-2. **Choose Rubric**: Select the appropriate evaluation type:
-   - Flowchart Evaluation
-   - Algorithm Evaluation  
-   - Pseudocode Evaluation
-
-3. **Get Results**: Receive instant AI-powered evaluation including:
-   - Overall score and grade
-   - Detailed rubric breakdown
-   - Performance visualization
-   - Improvement recommendations
-
-### Evaluation Criteria
-
-The system evaluates submissions based on multiple criteria:
-
-- **Clarity & Readability**: Symbol usage, labeling, formatting
-- **Logical Flow**: Sequence, decision points, loop structures
-- **Completeness**: Essential elements, edge cases, error handling
-- **Syntax & Standards**: Convention adherence, proper symbols
-- **Efficiency & Optimization**: Structure optimization, redundancy
-
-## Integration
-
-### Learning Management Systems
-The system is designed for easy integration with LMS platforms:
-- Stateless operation enables simple API integration
-- Standardized evaluation reports
-- Compatible with common educational workflows
-
-### API Integration
-Future backend integration points:
-- File upload and processing endpoints
-- Evaluation engine API
-- Report generation services
-- Rubric management endpoints
-
-## Technology Stack
-
-- **Frontend**: React 18, TypeScript, Vite
-- **UI Components**: Radix UI, Tailwind CSS
-- **Charts**: Recharts for data visualization
-- **Build Tool**: Vite for fast development and building
-
-## Key Benefits
-
-1. **No Data Storage**: Stateless evaluation system
-2. **Instant Feedback**: Real-time processing and results
-3. **Consistent Scoring**: AI-powered rubric adherence
-4. **Multiple Formats**: Comprehensive file type support
-5. **Educational Focus**: Designed for learning and assessment
-
-## Development
-
-### Project Structure
-The application follows a component-based architecture with:
-- Modular React components
-- TypeScript for type safety
-- Tailwind CSS for styling
-- Radix UI for accessible components
-
-### Building for Production
-```bash
-npm run build
+RubiAI/
+├── frontend/
+│   ├── src/
+│   │   ├── components/     # React components
+│   │   ├── contexts/       # React contexts for state management
+│   │   ├── services/       # AI evaluation service
+│   │   ├── utils/          # Utility functions
+│   │   └── styles/         # Global styles
+│   ├── public/             # Static assets and favicon
+│   └── package.json        # Dependencies and scripts
+├── test_files/             # Sample test files
+└── README.md
 ```
 
-## Contributing
+## 🔒 Security Notes
 
-This project is designed as a prototype for educational evaluation systems. Future enhancements may include:
-- Backend integration
-- Advanced AI models
-- Additional file format support
-- Enhanced rubric customization
-- Batch processing capabilities
+- The `.env` file containing your API key is automatically excluded from Git
+- All evaluations are processed client-side with external AI API calls
+- No sensitive data is stored on servers - everything is local to your browser
 
-## License
+## 🚀 Deployment
 
-This project is developed as a prototype for intelligent evaluation systems in educational and organizational settings.  ## Running the code
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Add your `VITE_OPENROUTER_API_KEY` to Vercel's environment variables
+4. Deploy automatically
 
-  Run `npm i` to install the dependencies.
+### Netlify
+1. Build the project: `npm run build`
+2. Upload the `dist` folder to Netlify
+3. Add environment variables in Netlify's dashboard
 
-  Run `npm run dev` to start the development server.
+### GitHub Pages
+1. Build the project: `npm run build`
+2. Deploy the `dist` folder to GitHub Pages
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📧 Support
+
+If you encounter any issues or have questions, please create an issue on GitHub.
   
