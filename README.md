@@ -24,8 +24,8 @@ An intelligent evaluation system for flowcharts, algorithms, and pseudocode usin
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/RubiAI.git
-   cd RubiAI/frontend
+   git clone https://github.com/Mukul2956/Rubric-AI.git
+   cd Rubric-AI/frontend
    ```
 
 2. **Install dependencies**
