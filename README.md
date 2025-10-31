@@ -377,4 +377,5 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 **[⭐ Star this project](https://github.com/Mukul2956/Rubric-AI/stargazers) • [🍴 Fork it](https://github.com/Mukul2956/Rubric-AI/fork) • [📢 Share it](https://twitter.com/intent/tweet?text=Check%20out%20RubiAI%20-%20Intelligent%20Rubrics-Based%20Evaluator!%20https://github.com/Mukul2956/Rubric-AI)**
 
 </div>
+
   
