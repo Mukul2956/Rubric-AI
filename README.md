@@ -1,7 +1,9 @@
 
 <div align="center">
 
-# 🎯 RubiAI - Intelligent Rubrics-Based Evaluator
+<img src="frontend/public/favicon.svg" alt="RubiAI Logo" width="120" height="120">
+
+# RubiAI - Intelligent Rubrics-Based Evaluator
 
 ### *Transform your educational assessment with AI-powered precision* ✨
 
@@ -373,6 +375,8 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 *Empowering education through intelligent assessment*
 
 [![Follow on GitHub](https://img.shields.io/github/followers/Mukul2956?style=social)](https://github.com/Mukul2956)
+
+<br><br><br>
 
 **[⭐ Star this project](https://github.com/Mukul2956/Rubric-AI/stargazers) • [🍴 Fork it](https://github.com/Mukul2956/Rubric-AI/fork) • [📢 Share it](https://twitter.com/intent/tweet?text=Check%20out%20RubiAI%20-%20Intelligent%20Rubrics-Based%20Evaluator!%20https://github.com/Mukul2956/Rubric-AI)**
 
