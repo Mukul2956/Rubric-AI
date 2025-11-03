@@ -129,7 +129,7 @@ npm run dev
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Mukul2956/Rubric-AI)
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Mukul2956/Rubric-AI)
 
-*Don't forget to add your `VITE_OPENROUTER_API_KEY` in the deployment settings!*
+*⚠️ **Important**: Set `Root Directory` to `frontend` and add `VITE_OPENROUTER_API_KEY` in environment variables!*
 
 </div>
 
